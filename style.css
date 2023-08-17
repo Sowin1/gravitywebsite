@@ -109,21 +109,22 @@ nav {
 /* End Navbar */
 /* Drawer Start */
 #sidebar {
-    display: none;
     position: fixed;
-    width: 300px;
+    width: 150px;
     background: #000;
     left: -300px;
     transition: .4s;
     z-index: 200;
     top: 0;
-    bottom: 0;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 #sidebar.active {
     left: 0;
-    
+    bottom: 0;
+    position: fixed;
+    width: 300px;
+    overflow-y: hidden;
 }
 
 .sidebar-content {
