@@ -55,37 +55,44 @@ body {
     color: white;
     font-size: 42px;
 }
+/* Navbar Start */
 nav {
-    
     margin-top: 1rem;
     padding: 10px;
+    width: 98%;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-}
-.left a {
-    margin-left: 1rem;
-    margin-right: 10px;
-    text-decoration: none;
+    width: 99%;
     color: whitesmoke;
-    font-size: 42px;
-    font-weight: bold;
     font-family: 'Roboto Slab VariableFont', sans-serif;
 }
-.center a {
+.logo a {
+    text-decoration: none;
+    font-size: 42px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+.logo-primary {
+    color: #e89b00;
+}
+.logo-secondary {
+    color: #133052;
+}
+.links a {
     margin: 0 20px;
     text-decoration: none;
     color: whitesmoke;
     font-size: 26px;
-    font-family: 'Roboto Slab VariableFont', sans-serif;
 }
-.right .login-button {
+.links a.active {
+    color: #ffffff;
+}
+.auth .login-button {
     display: inline-block;
     padding: 1rem 1.8rem;
-    margin-right: 2rem;
     border-radius: 39px;
     background-color: #e89b00;
     color: #ffffff;
@@ -93,14 +100,62 @@ nav {
     transition: background-color 0.3s ease-in-out;
     text-decoration: none;
     text-align: center;
-    font-family: 'Roboto Slab VariableFont', sans-serif;
 }
-.right .login-button:hover {
+
+.auth .login-button:hover {
     background-color: #ffffff;
     color: #e89b00;
-    
-    
 }
+/* End Navbar */
+/* Drawer Start */
+#sidebar {
+    display: none;
+    position: fixed;
+    width: 300px;
+    background: #000;
+    left: -300px;
+    transition: .4s;
+    z-index: 200;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+.sidebar-content {
+    overflow-y: auto;
+    max-height: calc(100vh - 60px);
+    /* Réduire la hauteur pour laisser de l'espace pour le bouton */
+}
+
+#sidebar ul li {
+    list-style: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 20px 24px;
+    text-align: center;
+}
+
+#sidebar .toggle-btn {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.toggle-btn span {
+    width: 45px;
+    height: 4px;
+    background: #c5b9b9;
+    display: block;
+    margin-top: 4px;
+}
+/* Drawer End */
 div.slogan {
     display: block;
     margin-left: auto;
@@ -253,68 +308,15 @@ iframe {
     width: 40px;
     height: 40px;
 }
-/*div.profil {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    margin-top: 26rem;
-    margin-left: 6rem;
-    background-color: #102844c7;
-    width: 636px;
-    height: 236px;
-    border-radius: 26px;
-    position: relative;
-}
-div.pdp {
-    background-color: green;
-    width: 9rem;
-    height: 9rem;
-    border-radius: 50%;
-    align-self: center;
-    overflow: hidden;
-    display: flex;
-    margin-left: 18px;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-h4.grade{
-    position: relative;
-    margin-left: -8.7rem;
-    top: 0.7rem;
-    color: rgba(179, 178, 178, 0.808);
-    font-family: 'Roboto Slab VariableFont', sans-serif;
-}
-h2.aka {
-    color: #ffffff;
-    font-weight: bold;
-    font-family: 'Roboto Slab VariableFont', sans-serif;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: 55%;
-    transform: translateX(-50%);
-    margin-top: 1rem;
-}
-span.aka1{
-    font-size: 15px;
-    color: rgba(153, 153, 153, 0.747);
-}
-div.favicons {
-    position: absolute;
-    bottom: 0;
-    left: 55%;
-    transform: translateX(-50%);
-    margin-bottom: 1rem;
-}
-div.favicons img {
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-}*/
 
 
 
+@media (max-width: 320px) {
+
+    nav .navbar {
+        display: none;
+    }
+    #sidebar {
+        display: block;
+    }
+}

@@ -41,37 +41,51 @@ body {
     color: white;
     font-size: 34px;
 }
+/* Start Navbar */
 nav {
-
     margin-top: 1rem;
     padding: 10px;
+    width: 98%;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-}
-.left a {
-    margin-left: 1rem;
-    margin-right: 10px;
-    text-decoration: none;
+    width: 99%;
     color: whitesmoke;
-    font-size: 42px;
-    font-weight: bold;
     font-family: 'Roboto Slab VariableFont', sans-serif;
 }
-.center a {
+
+.logo a {
+    text-decoration: none;
+    font-size: 42px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.logo-primary {
+    color: #e89b00;
+}
+
+.logo-secondary {
+    color: #133052;
+}
+
+.links a {
     margin: 0 20px;
     text-decoration: none;
     color: whitesmoke;
     font-size: 26px;
-    font-family: 'Roboto Slab VariableFont', sans-serif;
 }
-.right .login-button {
+
+.links a.active {
+    color: #ffffff;
+}
+
+.auth .login-button {
     display: inline-block;
     padding: 1rem 1.8rem;
-    margin-right: 2rem;
     border-radius: 39px;
     background-color: #e89b00;
     color: #ffffff;
@@ -79,14 +93,13 @@ nav {
     transition: background-color 0.3s ease-in-out;
     text-decoration: none;
     text-align: center;
-    font-family: 'Roboto Slab VariableFont', sans-serif;
 }
-.right .login-button:hover {
+
+.auth .login-button:hover {
     background-color: #ffffff;
     color: #e89b00;
-
-
 }
+/* End Navbar */
 .profil {
     display: flex;
     justify-content: flex-start;
@@ -165,4 +178,11 @@ nav {
     width: 2rem;
     height: 2rem;
     margin: 0 0.5rem;
+}
+
+@media (max-width: 320px) {
+
+    nav .navbar {
+        display: none;
+    }
 }
