@@ -109,9 +109,11 @@ nav {
 /* End Navbar */
 /* Drawer Start */
 #sidebar {
+    display: none;
     position: fixed;
     width: 150px;
-    background: #000;
+    background: rgb(232, 155, 0);
+    background: radial-gradient(circle, rgba(232, 155, 0, 0.6979166666666667) 0%, rgba(19, 48, 82, 0.9051995798319328) 0%);
     left: -300px;
     transition: .4s;
     z-index: 200;
@@ -123,7 +125,7 @@ nav {
     left: 0;
     bottom: 0;
     position: fixed;
-    width: 300px;
+    width: 200px;
     overflow-y: hidden;
 }
 
@@ -133,14 +135,23 @@ nav {
     /* Réduire la hauteur pour laisser de l'espace pour le bouton */
 }
 
+#sidebar ul {
+    padding: 0;
+    margin-top: 8rem;
+    /* Marge entre le haut du conteneur et la liste */
+}
+
 #sidebar ul li {
     list-style: none;
     color: #FFFFFF;
     font-size: 20px;
-    padding: 20px 24px;
-    text-align: center;
+    margin-left: 2rem;
+    line-height: 2rem;
+    text-align: left;
+    overflow-y: hidden;
+    margin-top: 2rem;
+    /* Marge entre les éléments de la liste */
 }
-
 #sidebar .toggle-btn {
     position: fixed;
     top: 30px;
@@ -315,10 +326,47 @@ iframe {
 
 @media (max-width: 320px) {
 
+
+    li {
+        text-decoration: none;
+    }
     nav .navbar {
         display: none;
     }
     #sidebar {
         display: block;
+        position: fixed;
     }
+    .links a {
+        display: none;
+    }
+    div.slogan {
+        display: block;
+        margin-top: 9rem;
+        margin-left: 6px;
+        width: 100%;
+        text-align: center;
+        font-size: 80%;
+        color: whitesmoke;
+        font-family: 'Roboto Slab VariableFont', sans-serif;
+        line-height: 2;
+            /* Ajuster la hauteur de ligne à un nombre approprié */
+    }
+    
+    .highlighted-text {
+        color: #E89B00;
+        display: inline;
+        line-height: inherit;
+            /* Hérite de la hauteur de ligne du parent */
+    }
+    .auth .login-button {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 18px;
+    margin-left: 1rem;
+}
+.hr-container p {
+    font-size: 26px;
+}
+
 }
