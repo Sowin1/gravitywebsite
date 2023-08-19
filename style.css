@@ -222,9 +222,7 @@ div.slogan {
     background-color: #151030;
 }
 #projet {
-    font-family: 'Righteous', sans-serif;
     color: rgba(255, 255, 255, 0.98);
-    text-transform: uppercase;
     font-size: 2.4rem;
     font-family: 'Roboto Slab VariableFont', sans-serif;
 }
@@ -235,7 +233,6 @@ div.slogan {
     font-size: 0.8rem;
     line-height: 150%;
     letter-spacing: 2px;
-    text-transform: uppercase;
     font-family: 'Roboto Slab VariableFont', sans-serif;
 }
 .button-wrapper {
@@ -352,7 +349,6 @@ iframe {
         line-height: 2;
             /* Ajuster la hauteur de ligne à un nombre approprié */
     }
-    
     .highlighted-text {
         color: #E89B00;
         display: inline;
@@ -360,13 +356,41 @@ iframe {
             /* Hérite de la hauteur de ligne du parent */
     }
     .auth .login-button {
-    display: inline-block;
-    margin-top: 2rem;
-    font-size: 18px;
-    margin-left: 1rem;
-}
-.hr-container p {
-    font-size: 26px;
-}
-
+        display: inline-block;
+        margin-top: 2rem;
+        font-size: 18px;
+        margin-left: 1rem;
+    }
+    .hr-container p {
+        font-size: 23px;
+    }
+    .hr-container {
+        margin-top: 6rem;
+    }
+    .colorful-hr {
+        margin: 0 9px;
+    }
+    .hr-container span {
+        margin: 0rem;
+    }
+    .container {
+        margin-left: 3.5%;
+        height: 10rem;
+        width: 70%;
+        align-items: normal;
+    }
+    .banner-image {
+        margin-top: 5rem;
+        margin-left: -13%;
+        height: 5rem;
+        width: 6rem;
+    }
+    #projet{
+        font-size: 32px;
+        margin-top: -9rem;
+        white-space: nowrap;
+    }
+    #projeto{
+        margin-left: 3rem;
+    }
 }
