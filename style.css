@@ -208,7 +208,6 @@ div.slogan {
 .wrapper {
     width: 65%;
     height: 65%;
-
 }
 .banner-image {
     background-image: url(pictures/grav.png);
@@ -381,16 +380,38 @@ iframe {
     }
     .banner-image {
         margin-top: 5rem;
-        margin-left: -13%;
+        margin-left: -9%;
         height: 5rem;
         width: 6rem;
     }
     #projet{
         font-size: 32px;
         margin-top: -9rem;
-        white-space: nowrap;
+        margin-right: 6rem;
     }
     #projeto{
-        margin-left: 3rem;
+        padding-left: 4.2rem;
+        word-wrap: break-word;
+        width: 60%;
+    }
+    .wrapper {
+        width: 100vw;
+    }
+    .button-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn {
+        font-size: 10px;
+        padding: 8px 6px;
+        margin-top: 3.5rem;
+    }
+    .btn+.btn {
+        font-size: 10px;
+        padding: 8px 10px;
+        margin-top: 3.5rem;
+    }
+    .btn-outline {
+        border-width: 0.5px;
     }
 }
