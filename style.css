@@ -320,11 +320,21 @@ iframe {
         overflow-x: hidden;
     }
 
+    .logo a {
+    font-size: 1.4rem;
+    } 
+    
+    .auth .login-button {
+        margin-top: 0.3rem;
+        font-size: 15px;
+        padding: 0.8rem 1.6rem;
+    }
+
     .links a {
     margin: 0 20px;
     text-decoration: none;
     color: whitesmoke;
-    font-size: 21px;
+    font-size: 1.2rem;
     }
 
     .logotyperesp {
@@ -347,13 +357,6 @@ iframe {
         color: #E89B00;
         display: inline;
         line-height: inherit;
-    }
-
-    .auth .login-button {
-        display: inline-block;
-        margin-top: 2rem;
-        font-size: 18px;
-        margin-left: 1rem;
     }
 
     .hr-container p {
@@ -457,6 +460,7 @@ iframe {
         font-family: 'Roboto Slab VariableFont', sans-serif;
         margin-top: 3rem;
         padding-left: 17rem;
+        padding-right: 0;
     }
 
     .logotyperesp a {
@@ -505,6 +509,7 @@ iframe {
 
     .hr-container {
         margin-top: 6rem;
+        right: 0;
     }
 
     .colorful-hr {
@@ -520,6 +525,7 @@ iframe {
         height: 10rem;
         width: 70%;
         align-items: normal;
+        margin-right: 0;
     }
 
     .banner-image {

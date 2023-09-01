@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Roboto Slab VariableFont';
-    src: url('fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+    src: url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
 }
@@ -99,6 +99,9 @@ nav {
     background-color: #ffffff;
     color: #e89b00;
 }
+.logotyperesp{
+    display: none;
+}
 /* End Navbar */
 .profil {
     display: flex;
@@ -179,10 +182,520 @@ nav {
     height: 2rem;
     margin: 0 0.5rem;
 }
+#sidebar {
+    display: none;
+    position: fixed;
+    width: 150px;
+    background: rgb(232, 155, 0);
+    background: radial-gradient(circle, rgba(232, 155, 0, 0.6979166666666667) 0%, rgba(19, 48, 82, 0.9051995798319328) 0%);
+    left: -300px;
+    transition: .4s;
+    z-index: 200;
+    top: 0;
+    overflow-y: hidden;
+}
 
-@media (max-width: 320px) {
+#sidebar.active {
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 200px;
+    overflow-y: hidden;
+}
+
+.sidebar-content {
+    overflow-y: auto;
+    max-height: calc(100vh - 60px);
+}
+
+#sidebar ul {
+    padding: 0;
+    margin-top: 8rem;
+}
+
+#sidebar ul li {
+    list-style: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-left: 2rem;
+    line-height: 2rem;
+    text-align: left;
+    overflow-y: hidden;
+    margin-top: 2rem;
+}
+
+#sidebar .toggle-btn {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.toggle-btn span {
+    width: 45px;
+    height: 4px;
+    background: #c5b9b9;
+    display: block;
+    margin-top: 4px;
+}
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .logo a {
+        font-size: 1.4rem;
+    }
+
+    .auth .login-button {
+        margin-top: 0.3rem;
+        font-size: 15px;
+        padding: 0.8rem 1.6rem;
+    }
+
+    .links a {
+        margin: 0 20px;
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 1.2rem;
+    }
+
+    .logotyperesp {
+        display: none;
+    }
+
+    /* Responsive OnStart */
+}
+
+@media only screen and (max-width: 768px) and (min-width: 426px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    li {
+        text-decoration: none;
+    }
+
+    nav {
+        width: 0%;
+    }
 
     nav .navbar {
         display: none;
     }
+
+    #sidebar {
+        display: block;
+        position: fixed;
+    }
+
+    .links a {
+        display: none;
+    }
+
+    .logotyperesp {
+        display: block;
+        font-family: 'Roboto Slab VariableFont', sans-serif;
+        margin-top: 3rem;
+        padding-left: 17rem;
+    }
+
+    .logotyperesp a {
+        text-decoration: none;
+        font-size: 42px;
+        font-weight: bold;
+        color: whitesmoke;
+    }
+
+    .logotyperesp-primary {
+        color: #e89b00;
+    }
+
+    .logotyperesp-secondary {
+        color: #133052;
+    }
+
+    /* Responsive OnStart */
+}
+
+@media only screen and (max-width: 425px) and (min-width: 401px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    li {
+        text-decoration: none;
+    }
+
+    nav {
+        width: 0%;
+    }
+
+    nav .navbar {
+        display: none;
+    }
+
+    #sidebar {
+        display: block;
+        position: fixed;
+    }
+
+    .links a {
+        display: none;
+    }
+
+    .auth .login-button {
+        display: inline-block;
+        margin-top: 2rem;
+        font-size: 18px;
+        margin-left: 1rem;
+    }
+
+    .logotyperesp {
+        display: block;
+        font-family: 'Roboto Slab VariableFont', sans-serif;
+        margin-top: 3rem;
+        padding-left: 6.3rem;
+    }
+
+    .logotyperesp a {
+        text-decoration: none;
+        font-size: 42px;
+        font-weight: bold;
+        color: whitesmoke;
+    }
+
+    .logotyperesp-primary {
+        color: #e89b00;
+    }
+
+    .logotyperesp-secondary {
+        color: #133052;
+    }
+
+    /* Responsive OnStart */
+    .hr-container {
+        margin-top: 24%;
+
+    }
+
+    .colorful-hr {
+        width: 10%;
+        height: 3px;
+        margin: 0 16px;
+    }
+
+    .hr-container span {
+        margin: 0rem;
+    }
+
+    .hr-container p {
+        font-size: 1.8rem;
+    }
+
+    .profil {
+        margin-top: 5rem;
+        margin-left: 1.5rem;
+        width: 90%;
+        height: 20rem;
+        border-radius: 26px;
+    }
+
+    .pdp {
+        margin-bottom: 12rem;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .description {
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .grade {
+        margin-left: 4rem;
+        font-size: 13px;
+        margin-bottom: 15.2rem;
+    }
+
+    .aka {
+        top: 1rem;
+        left: 60%;
+        width: 78%;
+        transform: translateX(-50%);
+        margin-top: 1.2rem;
+        font-size: 24px;
+    }
+
+    .aka1 {
+        font-size: 12px;
+    }
+
+    .profil p {
+        margin-left: -1rem;
+        margin-top: 1.4rem;
+        font-size: 90%;
+        width: 90%;
+        line-height: 1.4rem;
+    }
+
+    .favicons {
+        width: 12rem;
+    }
+}
+@media only screen and (max-width: 400px) and (min-width: 326px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    li {
+        text-decoration: none;
+    }
+
+    nav {
+        width: 0%;
+    }
+
+    nav .navbar {
+        display: none;
+    }
+
+    #sidebar {
+        display: block;
+        position: fixed;
+    }
+
+    .links a {
+        display: none;
+    }
+
+    .auth .login-button {
+        display: inline-block;
+        margin-top: 2rem;
+        font-size: 18px;
+        margin-left: 1rem;
+    }
+
+    .logotyperesp {
+        display: block;
+        font-family: 'Roboto Slab VariableFont', sans-serif;
+        margin-top: 3rem;
+        padding-left: 5.3rem;
+    }
+
+    .logotyperesp a {
+        text-decoration: none;
+        font-size: 42px;
+        font-weight: bold;
+        color: whitesmoke;
+    }
+
+    .logotyperesp-primary {
+        color: #e89b00;
+    }
+
+    .logotyperesp-secondary {
+        color: #133052;
+    }
+
+    /* Responsive OnStart */
+    .hr-container {
+    margin-top: 24%;
+
+    }
+    .colorful-hr {
+    width: 10%;
+    height: 3px;
+    margin: 0 16px;
+    }
+
+    .hr-container span {
+    margin: 0rem;
+    }
+
+    .hr-container p {
+    font-size: 21px;
+    }
+
+    .profil {
+    margin-top: 5rem;
+    margin-left: 1.3rem;
+    width: 90%;
+    height: 20rem;
+    border-radius: 26px;
+}
+.pdp {
+    margin-bottom: 12rem;
+    width: 5rem;
+    height: 5rem;
+}
+.description {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    width: 70%;
+    margin: 0 auto;
+}
+.grade {
+    margin-left: 1.7rem;
+    font-size: 13px;
+    margin-bottom: 15.7rem;
+}
+.aka {
+    top: 1rem;
+    left: 66%;
+    width: 78%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+    font-size: 19px;
+}
+.aka1 {
+    font-size: 12px;
+}
+.profil p {
+    margin-left: -1rem;
+    margin-top: 1.4rem;
+    font-size: 90%;
+    width: 90%;
+    line-height: 1.4rem;
+}
+.favicons {
+    width: 12rem;
+}
+}
+
+
+@media (max-width: 325px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    li {
+        text-decoration: none;
+    }
+
+    nav {
+        width: 0%;
+    }
+
+    nav .navbar {
+        display: none;
+    }
+
+    #sidebar {
+        display: block;
+        position: fixed;
+    }
+
+    .links a {
+        display: none;
+    }
+
+    .auth .login-button {
+        display: inline-block;
+        margin-top: 2rem;
+        font-size: 18px;
+        margin-left: 1rem;
+    }
+
+    .logotyperesp {
+        display: block;
+        font-family: 'Roboto Slab VariableFont', sans-serif;
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+
+    .logotyperesp a {
+        text-decoration: none;
+        font-size: 42px;
+        font-weight: bold;
+        color: whitesmoke;
+    }
+
+    .logotyperesp-primary {
+        color: #e89b00;
+    }
+
+    .logotyperesp-secondary {
+        color: #133052;
+    }
+
+    /* Responsive OnStart */
+    .hr-container {
+    margin-top: 24%;
+
+    }
+    .colorful-hr {
+    width: 10%;
+    height: 3px;
+    margin: 0 16px;
+    }
+
+    .hr-container span {
+    margin: 0rem;
+    }
+
+    .hr-container p {
+    font-size: 21px;
+    }
+
+    .profil {
+    margin-top: 5rem;
+    margin-left: 1rem;
+    width: 90%;
+    height: 20rem;
+    border-radius: 26px;
+}
+.pdp {
+    margin-bottom: 12rem;
+    width: 5rem;
+    height: 5rem;
+}
+.description {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Roboto Slab VariableFont', sans-serif;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.grade {
+    margin-left: 1.7rem;
+    font-size: 13px;
+    margin-bottom: 15.7rem;
+}
+.aka {
+    top: 1rem;
+    left: 66%;
+    width: 78%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+    font-size: 19px;
+}
+.aka1 {
+    font-size: 12px;
+}
+.profil p {
+    margin-left: -1rem;
+    margin-top: 1.2rem;
+    font-size: 90%;
+    width: 90%;
+    line-height: 1.4rem;
+}
+.favicons {
+    width: 12rem;
+}
 }
